@@ -4,6 +4,7 @@ import Promotion from "@/components/promotion";
 import Discography from "@/components/discography";
 import CountDown from "@/components/count-down";
 import BandMembers from "@/components/band-members";
+import Newsletter from "@/components/newsletter";
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
         <Discography />
         <CountDown />
         <BandMembers />
+        <Newsletter />
       </main>
     </>
   );
