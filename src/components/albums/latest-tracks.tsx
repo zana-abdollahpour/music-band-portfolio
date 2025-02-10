@@ -76,7 +76,7 @@ export function LatestTracks() {
               </a>
 
               <a
-                className="bg-golden text-blue flex w-28 items-center justify-start gap-x-3 px-3 py-1 text-xs md:gap-x-4 md:border-2 md:border-white md:px-6 md:text-lg"
+                className="bg-golden text-blue flex w-28 items-center justify-start gap-x-3 px-3 py-1 text-xs md:w-44 md:gap-x-4 md:border-2 md:border-white md:px-6 md:text-lg"
                 href="#"
               >
                 {track.purchaseLink ? (
