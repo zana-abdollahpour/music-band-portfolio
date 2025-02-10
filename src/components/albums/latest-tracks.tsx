@@ -1,6 +1,6 @@
 import { FaMusic, FaShoppingCart, FaDownload, FaPlay } from "react-icons/fa";
 
-import ZurawieAlbumCover from "@/assets/images/zurawie-album-cover.jpg";
+import ZurawieAlbumCover from "@/assets/images/albums/zurawie-album-cover.jpg";
 
 const tracksData = [
   {
