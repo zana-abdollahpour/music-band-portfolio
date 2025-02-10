@@ -4,9 +4,9 @@ export function Introduction() {
   return (
     <section
       className={cn(
-        "space-y-5 text-center sm:place-self-center md:relative",
-        "md:before:-top-28 md:before:left-1/2 md:before:size-96 md:before:-translate-x-1/2",
-        "md:before md:before:bg-blue/50 md:before:border-golden/50 md:before:rounded-full md:before:border-8 md:before:blur-sm",
+        "relative space-y-5 text-center sm:place-self-center",
+        "before before:-top-28 before:left-1/2 before:size-0 before:-translate-x-1/2 sm:before:size-96",
+        "before:bg-blue/50 before:border-golden/50 before:rounded-full before:border-8 before:blur-sm",
       )}
     >
       <h1 className="text-5xl md:text-7xl">Welcome to LaMusica</h1>
