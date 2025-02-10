@@ -1,4 +1,7 @@
+import { useEffect, useState } from "react";
+
 import { cn } from "@/utils";
+import { useSmallMediaQuery } from "@/hooks/use-media-query";
 
 const navLinks = [
   { name: "Home", href: "#" },
@@ -11,13 +14,26 @@ const navLinks = [
 ] as const;
 
 export function Navigation() {
+  const [isOpen, setIsOpen] = useState(false);
+  const isSmallScreen = useSmallMediaQuery();
+
+  useEffect(() => {
+    if (!isSmallScreen) setIsOpen(false);
+  }, [isSmallScreen]);
+
   return (
     <nav className="z-50 flex items-center justify-between self-start">
       <a href="#">
         <img src="/public/logo.svg" alt="LaMusica" />
       </a>
 
-      <ul className="bg-golden nav fixed top-0 left-0 z-50 flex h-screen w-screen origin-bottom scale-y-0 flex-col items-center justify-center gap-5 transition-transform duration-300 ease-in-out sm:static sm:h-auto sm:w-auto sm:scale-y-100 sm:flex-row sm:bg-transparent">
+      <ul
+        className={cn(
+          "bg-golden top-0 left-0 z-50 flex h-screen w-screen scale-y-0 ease-in-out sm:h-auto sm:w-auto sm:scale-y-100 sm:bg-transparent",
+          "fixed origin-bottom flex-col items-center justify-center gap-5 transition-transform duration-300 sm:static sm:flex-row",
+          isOpen && "origin-top scale-y-100",
+        )}
+      >
         {navLinks.map((navLink) => (
           <li
             key={navLink.name}
@@ -30,7 +46,7 @@ export function Navigation() {
             )}
           >
             <a
-              className="hover:text-blue sm:hover:text-golden text-lg text-white transition-colors lg:text-2xl"
+              className="hover:text-blue sm:hover:text-golden text-lg text-white transition-colors sm:text-base md:text-lg lg:text-2xl"
               href={navLink.href}
             >
               {navLink.name}
@@ -39,10 +55,30 @@ export function Navigation() {
         ))}
       </ul>
 
-      <div className="hamburger z-50 flex w-8 cursor-pointer flex-col items-center justify-center gap-y-1.5 sm:hidden">
-        <div className="h-[2px] w-full rounded bg-white transition-transform" />
-        <div className="h-[2px] w-full rounded bg-white transition-opacity" />
-        <div className="h-[2px] w-full rounded bg-white transition-transform" />
+      <div
+        role="button"
+        title="toggle menu"
+        onClick={() => setIsOpen((cur) => !cur)}
+        className="hamburger z-50 flex w-8 cursor-pointer flex-col items-center justify-center gap-y-1.5 sm:hidden"
+      >
+        <div
+          className={cn(
+            "h-[2px] w-full rounded bg-white transition-transform",
+            isOpen && "translate-y-2 rotate-45",
+          )}
+        />
+        <div
+          className={cn(
+            "h-[2px] w-full rounded bg-white transition-opacity",
+            isOpen && "opacity-0",
+          )}
+        />
+        <div
+          className={cn(
+            "h-[2px] w-full rounded bg-white transition-transform",
+            isOpen && "-translate-y-2 -rotate-45",
+          )}
+        />
       </div>
     </nav>
   );
