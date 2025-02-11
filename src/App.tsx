@@ -6,6 +6,7 @@ import CountDown from "@/components/count-down";
 import BandMembers from "@/components/band-members";
 import UpcomingTours from "@/components/upcoming-tours";
 import Newsletter from "@/components/newsletter";
+import Presale from "@/components/presale";
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
         <BandMembers />
         <UpcomingTours />
         <Newsletter />
+        <Presale />
       </main>
     </>
   );
