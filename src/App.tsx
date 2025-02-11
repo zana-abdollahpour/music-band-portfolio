@@ -8,6 +8,7 @@ import UpcomingTours from "@/components/upcoming-tours";
 import Newsletter from "@/components/newsletter";
 import Presale from "@/components/presale";
 import Gallery from "@/components/gallery";
+import Footer from "@/components/footer";
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
         <Presale />
         <Gallery />
       </main>
+      <Footer />
     </>
   );
 }
