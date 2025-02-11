@@ -5,7 +5,7 @@ export default function CountDown() {
     <section
       className={cn(
         "bg-blue flex flex-col gap-y-10 p-4 sm:p-8 md:p-12 lg:p-16",
-        "bg-[linear-gradient(to_top,#0a214e90,#0a214e40),url(showcase.jpg)] bg-cover bg-center",
+        "bg-[linear-gradient(to_top,#0a214e90,#0a214e40),url(countdown.jpg)] bg-cover bg-center",
       )}
     >
       <h2
