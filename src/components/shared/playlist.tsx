@@ -19,9 +19,9 @@ const playLinks = [
 export default function Playlist() {
   return (
     <ul className="flex justify-center gap-x-3">
-      {playLinks.map((playLink) => (
+      {playLinks.map((playLink, i) => (
         <li
-          key={playLink.href}
+          key={i}
           className="bg-slate/60 hover:bg-golden/60 flex size-6 cursor-pointer items-center justify-center border border-white/60 p-2 text-xs transition-colors"
         >
           <a href={playLink.href}>

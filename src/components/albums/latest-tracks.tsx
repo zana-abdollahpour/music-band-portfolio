@@ -55,7 +55,7 @@ export function LatestTracks() {
 
       <div className="divide-golden divide-y *:flex *:items-center *:justify-between *:gap-x-2 *:p-4 md:*:px-6">
         {tracksData.map((track) => (
-          <div>
+          <div key={track.name}>
             <div className="grid grid-cols-[min-content,1fr] grid-rows-2 items-center gap-x-2 md:gap-x-4">
               <FaPlay className="col-span-1 col-start-1 size-3 text-[8px] md:text-base" />
               <h6 className="text-golden col-start-2 text-xs md:text-xl">

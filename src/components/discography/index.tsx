@@ -41,7 +41,7 @@ export default function Discography() {
 
       <div className="grid gap-6 sm:grid-cols-2 sm:gap-10 lg:grid-cols-4">
         {allAlbums.map((album) => (
-          <div className="flex flex-col gap-y-5">
+          <div key={album.title} className="flex flex-col gap-y-5">
             <div>
               <h6 className="text-golden text-xl font-bold uppercase">
                 {album.title}

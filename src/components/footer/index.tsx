@@ -37,7 +37,7 @@ export default function Footer() {
 
       <div className="*:border-golden grid gap-5 *:space-y-2 *:border *:p-6 *:text-center *:backdrop-blur-md sm:grid-cols-3">
         {contactData.map((contact) => (
-          <div>
+          <div key={contact.email}>
             <h3 className="text-lg font-bold">{contact.department}</h3>
             <h5 className="text-lg uppercase">{contact.contactName}</h5>
             <a

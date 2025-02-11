@@ -33,7 +33,7 @@ export default function UpcomingTours() {
       <div className="space-y-6">
         <div className="border-golden divide-golden divide-y border *:flex *:justify-between *:p-4 sm:*:px-6">
           {toursData.map((tour) => (
-            <div>
+            <div key={tour.arena}>
               <p className="font-bold md:text-xl">{tour.date}</p>
 
               <div>
