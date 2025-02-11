@@ -7,6 +7,7 @@ import BandMembers from "@/components/band-members";
 import UpcomingTours from "@/components/upcoming-tours";
 import Newsletter from "@/components/newsletter";
 import Presale from "@/components/presale";
+import Gallery from "@/components/gallery";
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
         <UpcomingTours />
         <Newsletter />
         <Presale />
+        <Gallery />
       </main>
     </>
   );
